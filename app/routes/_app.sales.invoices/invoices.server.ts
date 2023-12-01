@@ -1,13 +1,46 @@
 export const getInvoices = async ()=>{ 
-    return[
-  { id: 1, customer: 'Santa Monica', value: 10.800 },
-  { id: 2, customer: 'Crimson Dynamics', value: 15.500 },
-  { id: 3, customer: 'Golden Gate Services', value: 8.750 },
-  { id: 4, customer: 'Emerald Solutions', value: 20.200 },
-  { id: 5, customer: 'Pacific Tech', value: 12.300 },
-  { id: 6, customer: 'Azure Innovations', value: 18.600 },
-  { id: 7, customer: 'Rainbow Enterprises', value: 14.750 },
-  { id: 8, customer: 'Sapphire Solutions', value: 22.100 },
-  { id: 9, customer: 'Sunset Industries', value: 9.450 },
-  { id: 10, customer: 'Lunar Systems', value: 16.900 },
-]};
+    return [
+  {
+    invoice: "INV001",
+    paymentStatus: "Paid",
+    totalAmount: "$250.00",
+    paymentMethod: "Credit Card",
+  },
+  {
+    invoice: "INV002",
+    paymentStatus: "Pending",
+    totalAmount: "$150.00",
+    paymentMethod: "PayPal",
+  },
+  {
+    invoice: "INV003",
+    paymentStatus: "Unpaid",
+    totalAmount: "$350.00",
+    paymentMethod: "Bank Transfer",
+  },
+  {
+    invoice: "INV004",
+    paymentStatus: "Paid",
+    totalAmount: "$450.00",
+    paymentMethod: "Credit Card",
+  },
+  {
+    invoice: "INV005",
+    paymentStatus: "Paid",
+    totalAmount: "$550.00",
+    paymentMethod: "PayPal",
+  },
+  {
+    invoice: "INV006",
+    paymentStatus: "Pending",
+    totalAmount: "$200.00",
+    paymentMethod: "Bank Transfer",
+  },
+  {
+    invoice: "INV007",
+    paymentStatus: "Unpaid",
+    totalAmount: "$300.00",
+    paymentMethod: "Credit Card",
+  },
+]
+};

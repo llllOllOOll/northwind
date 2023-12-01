@@ -1,22 +1,18 @@
+import { Outlet, useLoaderData} from "@remix-run/react"
+import { InvoicesList } from "./invoices"
 import { json } from "@remix-run/node"
-import { Outlet, useLoaderData } from "@remix-run/react"
 import { getInvoices } from "./invoices.server"
 
+export const loader = async () => json(await getInvoices())
 
-export const loader = async () =>{
-  return json(await getInvoices())
-}
 
 function Invoices() {
-  const invoices = useLoaderData<typeof loader>()
+  const invoices  = useLoaderData<typeof loader>()
   return (
-    <div className="bg-yellow-200 min-h-full">
-      <h1>Invoices</h1>
-      <ul>
-        {invoices.map((invoice)=><li key={invoice.id}>{invoice.customer}</li>)}
-      </ul>
+    <div className="bg-zinc-400 min-h-full">
+      <InvoicesList invoices={invoices}/>
       <Outlet />
-      </div>
+     </div>
   )
 }
 
