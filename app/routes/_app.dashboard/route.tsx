@@ -1,8 +1,11 @@
 import React from 'react'
+import { Overview } from './chart'
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div>
+      <Overview />
+    </div>
   )
 }
 

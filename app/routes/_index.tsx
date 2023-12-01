@@ -1,9 +1,3 @@
-import React from 'react'
+import { redirect } from "@remix-run/node";
 
-const Index = () => {
-  return (
-    <div>Index</div>
-  )
-}
-
-export default Index
+export const loader = () => redirect('/dashboard')
